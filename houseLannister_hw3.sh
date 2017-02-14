@@ -19,9 +19,6 @@
 
 #set -o nounset                              # Treat unset variables as an error
 
-sedFile="houseLannister.hw3.sed"
-awkFile="houseLannister.hw3.awk"
-inputFile=$7
 
 # Help Function
 usage()
@@ -70,10 +67,10 @@ then
 fi
 
 # SED Call
-$inputFile |
-sed -f $sedFile |
+cat $i |
+sed -f $s |
 # AWK Call
-awk -f $awkFile > 20thCenturyPresidents.txt
+awk -f $a > 20thCenturyPresidents.txt
 
 echo "Your output file will be saved in 20thCenturyPresidents.txt"
 
